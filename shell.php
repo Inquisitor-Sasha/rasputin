@@ -33,13 +33,15 @@ fclose( $file );
 -->
 
 	<form action="shell.php" method="post">
-		<input type="text" size="200" name="command">
+		<input type="text" width="700px" name="command">
 		<input type="submit" value="execute">
 	</form>
 <br>
 	<form action="clrHist.php" method="post">
 		<input type="submit" value="Clear command history">
 	</form>
+
+<center><a href="editor.php">Editor</a></center>
 
 </body>
 </html>
