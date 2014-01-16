@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+
+if ( !isset( $_SESSION['username'] ) ) {
+        header( 'Location: login.html' );
+}
+
 //Gets the command to be executed
 $command = $_POST['command'];
 
@@ -41,7 +47,7 @@ fclose( $file );
 		<input type="submit" value="Clear command history">
 	</form>
 
-<center><a href="editor.php">Editor</a></center>
+<center><a href="editor.php">Editor</a> |  <a href="sudoShell.php">sudo Shell</a> | <a href="index.php">Home</a></center>
 
 </body>
 </html>

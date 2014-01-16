@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+
+if ( !isset( $_SESSION['username'] ) ) {
+        header( 'Location: login.html' );
+}
+
 $filepath = $_POST['filepath'];
 
 if ( isset( $filepath ) == true ) {
@@ -35,7 +41,7 @@ if ( isset( $savedfile ) == true ) {
 		<textarea name="savedfile" height="600px" width="700px" rows="35" cols="100"><? echo $filecontent ?></textarea>
 	</form>
 
-<center><a href="shell.php">Shell</a></center>
+<center><a href="shell.php">Shell</a> | <a href="sudoShell.php">sudo Shell</a> | <a href="index.php">Home</a></center>
 
 </body>
 </html>

@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+
+if ( !isset( $_SESSION['username'] ) ) {
+        header( 'Location: login.html' );
+}
+
 //Get username and password for sudo
 $user = $_POST['user'];
 $password = $_POST['password'];

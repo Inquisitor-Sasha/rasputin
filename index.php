@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if ( !isset( $_SESSION['username'] ) ) {
+	header( 'Location: login.html' );
+}
+
+?>
+
 <html>
 <head>
 	<title>Rasputin</title>
@@ -10,6 +20,12 @@
 	<li><a href="editor.php">File editor</a></li>
 	<li><a href="mysql.php">MySQL query execution</a></li>
 	<li><a href="info.php">PHP information</a></li>
+
+	<center>
+		<form action="logout.php" method="post">
+			<input type="submit" value="logout">
+		</form>
+	</center>
 
 </body>
 </html>
